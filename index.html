@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Automation</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js" type="text/javascript"></script>
+  <script src="./script/index.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <div class="page-title">
+      <h1 class="title">Smart Home Automation</h1>
+      <h2 class="nim-nama">13519118 - Cynthia Rusadi</h2>
+    </div>
+    <div class="content">
+      <div class="bulb">
+        <h3 class="item-name">LED Lamp</h3>
+        <label class="button">
+          <input type="checkbox" onclick="clickLamp()" id="lamp-input">
+          <span class="slider"></span>
+        </label>
+        <div class="scheduled">
+          <h4>Or turn on after</h4>
+          <input type="text" id="lamp-time">
+          <h4>second(s)</h4>
+          <button class="submit" onclick="timerLamp()">OK!</button>
+        </div>
+        <div class="time">
+          <h4 class="usage-time">Usage Time</h4>
+          <p class="timer">
+            <span id="led-timer">0</span>
+            s
+          </p>
+        </div>
+        </div>
+      </div>
+      <div class="ac">
+        <h3 class="item-name">Air Conditioner</h3>
+        <label class="button">
+          <input type="checkbox" onclick="clickAc()" id="ac-input">
+          <span class="slider"></span>
+        </label>
+        <div class="scheduled">
+          <h4>Or turn on after</h4>
+          <input type="text" id="ac-time">
+          <h4>second(s)</h4>
+          <button class="submit" onclick="timerAc()">OK!</button>
+        </div>
+        <div class="time">
+          <h4 class="usage-time">Usage Time</h4>
+          <p class="timer">
+            <span id="ac-timer">0</span>
+            s
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
